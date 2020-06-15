@@ -16,8 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: packages upgrade
-      run: flutter packages upgrade
     - name: Install dependencies
       run: flutter pub get
     - name: Run tests
