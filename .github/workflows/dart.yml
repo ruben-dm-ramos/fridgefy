@@ -8,15 +8,8 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    container:
-      image:  google/dart:*
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: flutter pub get
-    - name: Run tests
-      run: flutter test
+      - uses: actions/checkout@v2
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter build apk
